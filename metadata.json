@@ -1,0 +1,6 @@
+{
+  "name": "1PLACE.lk — Coming Soon",
+  "description": "1PLACE.lk — Everything You Need. One Place. Sri Lanka's new online marketplace launches November 1, 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

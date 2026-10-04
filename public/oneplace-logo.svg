@@ -1,0 +1,161 @@
+<svg viewBox="0 0 1000 660" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bagFrontGrad" x1="420" y1="90" x2="620" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="35%" stop-color="#F3F5F8" />
+      <stop offset="70%" stop-color="#D8DDE6" />
+      <stop offset="100%" stop-color="#BAC2CE" />
+    </linearGradient>
+    <linearGradient id="bagFrontSpecular" x1="400" y1="120" x2="560" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="bagSideRedGrad" x1="280" y1="180" x2="410" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF1E2B" />
+      <stop offset="20%" stop-color="#E50914" />
+      <stop offset="60%" stop-color="#96050C" />
+      <stop offset="100%" stop-color="#550005" />
+    </linearGradient>
+    <linearGradient id="bagRimHighlight" x1="270" y1="200" x2="390" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFA4A8" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#FF333E" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.85" />
+    </linearGradient>
+    <linearGradient id="numeral1FrontGrad" x1="560" y1="180" x2="650" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF333E" />
+      <stop offset="30%" stop-color="#E50914" />
+      <stop offset="70%" stop-color="#B30710" />
+      <stop offset="100%" stop-color="#700207" />
+    </linearGradient>
+    <linearGradient id="numeral1BevelGrad" x1="600" y1="160" x2="690" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="15%" stop-color="#FF8B92" />
+      <stop offset="50%" stop-color="#B50710" />
+      <stop offset="100%" stop-color="#4A0004" />
+    </linearGradient>
+    <linearGradient id="swooshGrad" x1="450" y1="360" x2="770" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="15%" stop-color="#FF333E" />
+      <stop offset="50%" stop-color="#E50914" />
+      <stop offset="85%" stop-color="#8C040A" />
+      <stop offset="100%" stop-color="#E50914" />
+    </linearGradient>
+    <linearGradient id="swooshRimGrad" x1="470" y1="340" x2="740" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+      <stop offset="40%" stop-color="#FFCAD0" stop-opacity="0.85" />
+      <stop offset="80%" stop-color="#FF3B47" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="chromeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="44%" stop-color="#F1F3F7" />
+      <stop offset="47%" stop-color="#CAD0DB" />
+      <stop offset="50%" stop-color="#6C7380" />
+      <stop offset="53%" stop-color="#CBD2DE" />
+      <stop offset="80%" stop-color="#EFF2F7" />
+      <stop offset="100%" stop-color="#B6BEC9" />
+    </linearGradient>
+    <linearGradient id="chromeRedBevel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF2E3A" />
+      <stop offset="40%" stop-color="#E50914" />
+      <stop offset="100%" stop-color="#6B0005" />
+    </linearGradient>
+  </defs>
+
+  <g id="upper-emblem">
+    <path d="M 460 140 C 455 70, 520 40, 565 55 C 605 68, 608 120, 602 165" stroke="#111111" stroke-width="24" stroke-linecap="round" fill="none" />
+    <path d="M 460 140 C 455 70, 520 40, 565 55 C 605 68, 608 120, 602 165" stroke="#E2E5EB" stroke-width="12" stroke-linecap="round" fill="none" />
+
+    <path d="M 430 185 C 420 100, 480 65, 525 80 C 565 92, 570 145, 560 195" stroke="#0A0A0A" stroke-width="24" stroke-linecap="round" fill="none" />
+    <path d="M 430 185 C 420 100, 480 65, 525 80 C 565 92, 570 145, 560 195" stroke="#F8F9FA" stroke-width="13" stroke-linecap="round" fill="none" />
+    <path d="M 440 175 C 435 110, 485 80, 520 92 C 550 102, 555 140, 550 185" stroke="#C0C5CF" stroke-width="4" stroke-linecap="round" fill="none" />
+
+    <path d="M 268 415 L 372 445 L 640 445 L 645 285 L 430 190 L 335 220 Z" fill="#050505" opacity="0.8" />
+
+    <path d="M 334 220 L 428 190 L 396 448 L 268 418 Z" fill="#000000" stroke="#000000" stroke-width="14" stroke-linejoin="round" />
+    <path d="M 336 222 L 426 193 L 394 445 L 271 416 Z" fill="url(#bagSideRedGrad)" />
+    <path d="M 338 226 L 275 413" stroke="url(#bagRimHighlight)" stroke-width="8" stroke-linecap="round" />
+    <path d="M 423 197 L 392 441" stroke="#3B0003" stroke-width="7" />
+
+    <path d="M 428 190 L 640 280 L 605 448 L 396 448 Z" fill="#050505" stroke="#000000" stroke-width="14" stroke-linejoin="round" />
+    <path d="M 430 193 L 636 281 L 602 444 L 398 444 Z" fill="url(#bagFrontGrad)" />
+    <polygon points="430,193 450,210 622,284 636,281" fill="#CAD1DC" />
+    <path d="M 440 215 L 530 250 L 470 440 L 415 440 Z" fill="url(#bagFrontSpecular)" />
+
+    <path d="M 526 310 L 646 244 L 688 285 L 610 330 L 600 448 L 510 448 L 526 310 Z" fill="#050505" stroke="#000000" stroke-width="16" stroke-linejoin="round" />
+    <path d="M 646 244 L 688 285 L 616 448 L 588 448 L 610 330 Z" fill="url(#numeral1BevelGrad)" stroke="#150002" stroke-width="3" stroke-linejoin="round" />
+    <path d="M 530 312 L 646 246 L 610 332 L 600 444 L 525 444 Z" fill="url(#numeral1FrontGrad)" stroke="#FF4D57" stroke-width="2.5" stroke-linejoin="round" />
+    <path d="M 530 312 L 646 246 L 688 285" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 646 246 L 610 332 L 600 444" stroke="#FFA4A8" stroke-width="3" stroke-linecap="round" />
+
+    <path d="M 450 365 C 510 445, 680 448, 772 385 C 755 422, 635 456, 520 442 C 465 435, 435 398, 450 365 Z" fill="#000000" stroke="#000000" stroke-width="14" stroke-linejoin="round" />
+    <path d="M 454 367 C 512 442, 678 445, 768 387 C 750 420, 633 452, 522 439 C 468 432, 440 397, 454 367 Z" fill="url(#swooshGrad)" />
+    <path d="M 456 369 C 518 438, 675 442, 765 389" stroke="url(#swooshRimGrad)" stroke-width="5.5" stroke-linecap="round" />
+    <path d="M 490 415 C 560 444, 650 442, 720 410" stroke="#FF6B75" stroke-width="3" stroke-linecap="round" opacity="0.85" />
+  </g>
+
+  <g id="wordmark-oneplace">
+    <!-- O -->
+    <g transform="translate(25, 435)">
+      <path d="M 65 15 C 25 15, 0 45, 0 85 C 0 125, 25 155, 65 155 C 105 155, 130 125, 130 85 C 130 45, 105 15, 65 15 Z M 65 52 C 84 52, 92 68, 92 85 C 92 102, 84 118, 65 118 C 46 118, 38 102, 38 85 C 38 68, 46 52, 65 52 Z" fill="#080808" stroke="#000000" stroke-width="20" stroke-linejoin="round" />
+      <path d="M 65 24 C 30 24, 8 50, 8 88 C 8 128, 30 156, 65 156 C 100 156, 122 128, 122 88 C 122 50, 100 24, 65 24 Z" fill="url(#chromeRedBevel)" />
+      <path d="M 65 16 C 28 16, 6 44, 6 82 C 6 120, 28 148, 65 148 C 102 148, 124 120, 124 82 C 124 44, 102 16, 65 16 Z M 65 50 C 83 50, 89 66, 89 82 C 89 98, 83 114, 65 114 C 47 114, 41 98, 41 82 C 41 66, 47 50, 65 50 Z" fill="url(#chromeGrad)" stroke="#FFFFFF" stroke-width="2" />
+    </g>
+    <!-- N -->
+    <g transform="translate(170, 435)">
+      <path d="M 12 18 L 46 18 L 86 102 L 86 18 L 118 18 L 118 152 L 84 152 L 44 68 L 44 152 L 12 152 Z" fill="#080808" stroke="#000000" stroke-width="20" stroke-linejoin="round" />
+      <path d="M 12 25 L 46 25 L 86 108 L 86 25 L 118 25 L 118 156 L 84 156 L 44 74 L 44 156 L 12 156 Z" fill="url(#chromeRedBevel)" />
+      <path d="M 12 18 L 46 18 L 86 102 L 86 18 L 118 18 L 118 148 L 84 148 L 44 64 L 44 148 L 12 148 Z" fill="url(#chromeGrad)" stroke="#FFFFFF" stroke-width="2" />
+    </g>
+    <!-- E -->
+    <g transform="translate(305, 435)">
+      <path d="M 14 18 L 105 18 L 105 50 L 52 50 L 52 68 L 98 68 L 98 98 L 52 98 L 52 118 L 108 118 L 108 150 L 14 150 Z" fill="#080808" stroke="#000000" stroke-width="20" stroke-linejoin="round" />
+      <path d="M 14 25 L 105 25 L 105 56 L 52 56 L 52 74 L 98 74 L 98 104 L 52 104 L 52 124 L 108 124 L 108 156 L 14 156 Z" fill="url(#chromeRedBevel)" />
+      <path d="M 14 18 L 105 18 L 105 50 L 52 50 L 52 68 L 98 68 L 98 98 L 52 98 L 52 118 L 108 118 L 108 148 L 14 148 Z" fill="url(#chromeGrad)" stroke="#FFFFFF" stroke-width="2" />
+    </g>
+    <!-- P -->
+    <g transform="translate(425, 435)">
+      <path d="M 14 18 L 76 18 C 105 18, 122 35, 122 64 C 122 93, 105 110, 76 110 L 52 110 L 52 150 L 14 150 Z M 52 48 L 72 48 C 84 48, 88 54, 88 64 C 88 74, 84 80, 72 80 L 52 80 Z" fill="#080808" stroke="#000000" stroke-width="20" stroke-linejoin="round" />
+      <path d="M 14 25 L 76 25 C 105 25, 122 42, 122 70 C 122 98, 105 116, 76 116 L 52 116 L 52 156 L 14 156 Z" fill="url(#chromeRedBevel)" />
+      <path d="M 14 18 L 76 18 C 105 18, 122 35, 122 64 C 122 93, 105 110, 76 110 L 52 110 L 52 148 L 14 148 Z M 52 48 L 72 48 C 84 48, 88 54, 88 64 C 88 74, 84 80, 72 80 L 52 80 Z" fill="url(#chromeGrad)" stroke="#FFFFFF" stroke-width="2" />
+    </g>
+    <!-- L -->
+    <g transform="translate(560, 435)">
+      <path d="M 14 18 L 52 18 L 52 116 L 106 116 L 106 150 L 14 150 Z" fill="#080808" stroke="#000000" stroke-width="20" stroke-linejoin="round" />
+      <path d="M 14 25 L 52 25 L 52 122 L 106 122 L 106 156 L 14 156 Z" fill="url(#chromeRedBevel)" />
+      <path d="M 14 18 L 52 18 L 52 116 L 106 116 L 106 148 L 14 148 Z" fill="url(#chromeGrad)" stroke="#FFFFFF" stroke-width="2" />
+    </g>
+    <!-- A -->
+    <g transform="translate(680, 435)">
+      <path d="M 64 16 L 118 150 L 80 150 L 66 114 L 38 114 L 26 150 L 4 150 Z M 52 74 L 62 100 L 42 100 Z" fill="#080808" stroke="#000000" stroke-width="20" stroke-linejoin="round" />
+      <path d="M 64 24 L 118 156 L 80 156 L 66 120 L 38 120 L 26 156 L 4 156 Z" fill="url(#chromeRedBevel)" />
+      <path d="M 64 16 L 118 148 L 80 148 L 66 112 L 38 112 L 26 148 L 4 148 Z" fill="url(#chromeGrad)" stroke="#FFFFFF" stroke-width="2" />
+      <polygon points="52,68 74,112 30,112" fill="#000000" stroke="#000000" stroke-width="6" />
+      <polygon points="52,70 72,110 32,110" fill="url(#numeral1FrontGrad)" stroke="#FF8890" stroke-width="2" />
+      <polygon points="52,70 60,94 44,94" fill="#FFFFFF" opacity="0.75" />
+    </g>
+    <!-- C -->
+    <g transform="translate(805, 435)">
+      <path d="M 106 50 C 95 30, 80 18, 58 18 C 24 18, 0 46, 0 85 C 0 124, 24 152, 58 152 C 80 152, 96 138, 106 120 L 76 102 C 72 112, 64 118, 55 118 C 38 118, 36 102, 36 85 C 36 68, 40 52, 55 52 C 64 52, 70 58, 76 68 Z" fill="#080808" stroke="#000000" stroke-width="20" stroke-linejoin="round" />
+      <path d="M 106 56 C 95 36, 80 24, 58 24 C 24 24, 0 52, 0 91 C 0 130, 24 158, 58 158 C 80 158, 96 144, 106 126 L 76 108 C 72 118, 64 124, 55 124 C 38 124, 36 108, 36 91 C 36 74, 40 58, 55 58 C 64 58, 70 64, 76 74 Z" fill="url(#chromeRedBevel)" />
+      <path d="M 106 48 C 95 28, 80 16, 58 16 C 24 16, 0 44, 0 83 C 0 122, 24 150, 58 150 C 80 150, 96 136, 106 118 L 76 100 C 72 110, 64 116, 55 116 C 38 116, 36 100, 36 83 C 36 66, 40 50, 55 50 C 64 50, 70 56, 76 66 Z" fill="url(#chromeGrad)" stroke="#FFFFFF" stroke-width="2" />
+    </g>
+    <!-- E -->
+    <g transform="translate(900, 435)">
+      <path d="M 14 18 L 92 18 L 92 50 L 48 50 L 48 68 L 86 68 L 86 98 L 48 98 L 48 118 L 94 118 L 94 150 L 14 150 Z" fill="#080808" stroke="#000000" stroke-width="20" stroke-linejoin="round" />
+      <path d="M 14 25 L 92 25 L 92 56 L 48 56 L 48 74 L 86 74 L 86 104 L 48 104 L 48 124 L 94 124 L 94 156 L 14 156 Z" fill="url(#chromeRedBevel)" />
+      <path d="M 14 18 L 92 18 L 92 50 L 48 50 L 48 68 L 86 68 L 86 98 L 48 98 L 48 118 L 94 118 L 94 148 L 14 148 Z" fill="url(#chromeGrad)" stroke="#FFFFFF" stroke-width="2" />
+    </g>
+  </g>
+
+  <g id="subtitle-tagline" transform="translate(0, 615)">
+    <path d="M 40 10 L 132 10" stroke="#0D0D0D" stroke-width="10" stroke-linecap="round" />
+    <path d="M 40 10 L 132 10" stroke="#E50914" stroke-width="2.5" stroke-linecap="round" />
+    <text x="500" y="17" text-anchor="middle" fill="#FFFFFF" stroke="#000000" stroke-width="4" paint-order="stroke fill" font-size="24" font-weight="900" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" letter-spacing="0.22em">
+      EVERYTHING YOU NEED, IN ONE PLACE.
+    </text>
+    <path d="M 868 10 L 960 10" stroke="#0D0D0D" stroke-width="10" stroke-linecap="round" />
+    <path d="M 868 10 L 960 10" stroke="#E50914" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+</svg>

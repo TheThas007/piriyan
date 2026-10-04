@@ -1,0 +1,244 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg: #050505;
+    --color-bg-secondary: #0b0b0b;
+    --color-red-primary: #e50914;
+    --color-red-bright: #ff1a1a;
+    --color-red-glow: rgba(229, 9, 20, 0.55);
+    --color-text-white: #ffffff;
+    --color-text-muted: #a1a1aa;
+    --color-border: rgba(255, 255, 255, 0.12);
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text-white);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Typography Helpers */
+.font-display {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.font-mono-numbers {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Red Neon Text Glow */
+.text-glow-red {
+  text-shadow: 0 0 20px rgba(229, 9, 20, 0.75), 0 0 45px rgba(229, 9, 20, 0.45);
+}
+
+.box-glow-red {
+  box-shadow: 0 0 35px -5px rgba(229, 9, 20, 0.35), inset 0 0 15px rgba(229, 9, 20, 0.18);
+}
+
+/* Ambient Film Grain Overlay */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.038'/%3E%3C/svg%3E");
+}
+
+/* ======================================================== */
+/* HERO MAIN LOGO ANIMATIONS (Expensive, Cinematic Float)  */
+/* ======================================================== */
+@keyframes heroLogoFloat {
+  0% {
+    transform: translateY(-8px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(-8px) rotate(-2deg);
+  }
+}
+
+@keyframes heroGlowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 35px rgba(229, 9, 20, 0.45)) drop-shadow(0 20px 45px rgba(0, 0, 0, 0.85));
+  }
+  50% {
+    filter: drop-shadow(0 0 65px rgba(229, 9, 20, 0.75)) drop-shadow(0 28px 55px rgba(0, 0, 0, 0.95));
+  }
+}
+
+.anim-hero-float {
+  animation: heroLogoFloat 7.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.anim-hero-glow {
+  animation: heroGlowPulse 5s ease-in-out infinite;
+}
+
+/* ======================================================== */
+/* BACKGROUND MOVING LOGOS KEYFRAMES                       */
+/* ======================================================== */
+
+/* 1. Left to Right */
+@keyframes bgDriftLeftToRight {
+  0% {
+    transform: translate3d(-40vw, var(--start-y, 10vh), 0) rotate(var(--start-rot, -6deg)) scale(var(--logo-scale, 1));
+  }
+  50% {
+    transform: translate3d(50vw, calc(var(--start-y, 10vh) + var(--sway-y, 30px)), 0) rotate(calc(var(--start-rot, -6deg) + 6deg)) scale(var(--logo-scale, 1));
+  }
+  100% {
+    transform: translate3d(140vw, var(--start-y, 10vh), 0) rotate(calc(var(--start-rot, -6deg) + 12deg)) scale(var(--logo-scale, 1));
+  }
+}
+
+/* 2. Right to Left */
+@keyframes bgDriftRightToLeft {
+  0% {
+    transform: translate3d(140vw, var(--start-y, 50vh), 0) rotate(var(--start-rot, 4deg)) scale(var(--logo-scale, 1));
+  }
+  50% {
+    transform: translate3d(50vw, calc(var(--start-y, 50vh) - var(--sway-y, 25px)), 0) rotate(calc(var(--start-rot, 4deg) - 5deg)) scale(var(--logo-scale, 1));
+  }
+  100% {
+    transform: translate3d(-40vw, var(--start-y, 50vh), 0) rotate(calc(var(--start-rot, 4deg) - 10deg)) scale(var(--logo-scale, 1));
+  }
+}
+
+/* 3. Bottom-Left to Top-Right */
+@keyframes bgDriftDiagBottomToTop {
+  0% {
+    transform: translate3d(-30vw, 120vh, 0) rotate(var(--start-rot, -8deg)) scale(var(--logo-scale, 1));
+  }
+  100% {
+    transform: translate3d(130vw, -30vh, 0) rotate(calc(var(--start-rot, -8deg) + 16deg)) scale(var(--logo-scale, 1));
+  }
+}
+
+/* 4. Top-Right to Bottom-Left */
+@keyframes bgDriftDiagTopToBottom {
+  0% {
+    transform: translate3d(130vw, -25vh, 0) rotate(var(--start-rot, 6deg)) scale(var(--logo-scale, 1));
+  }
+  100% {
+    transform: translate3d(-35vw, 125vh, 0) rotate(calc(var(--start-rot, 6deg) - 14deg)) scale(var(--logo-scale, 1));
+  }
+}
+
+/* 5. Continuous Rotating Drift */
+@keyframes bgRotatingDrift {
+  0% {
+    transform: translate3d(-35vw, var(--start-y, 30vh), 0) rotate(0deg) scale(var(--logo-scale, 1));
+  }
+  100% {
+    transform: translate3d(135vw, calc(var(--start-y, 30vh) + 40px), 0) rotate(360deg) scale(var(--logo-scale, 1));
+  }
+}
+
+/* 6. Subtle Pulse */
+@keyframes redPulseSlow {
+  0%, 100% {
+    opacity: 0.22;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.38;
+    transform: scale(1.1);
+  }
+}
+
+/* 7. Sheen animation across progress bar */
+@keyframes progressGleam {
+  0% {
+    transform: translateX(-100%);
+  }
+  60%, 100% {
+    transform: translateX(200%);
+  }
+}
+
+/* 8. Light streaks drifting */
+@keyframes streakDrift {
+  0% {
+    transform: translateX(-150%) skewX(-30deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(250%) skewX(-30deg);
+    opacity: 0;
+  }
+}
+
+.anim-drift-ltr {
+  animation: bgDriftLeftToRight var(--anim-duration, 38s) linear infinite;
+  animation-delay: var(--anim-delay, 0s);
+  will-change: transform;
+}
+
+.anim-drift-rtl {
+  animation: bgDriftRightToLeft var(--anim-duration, 36s) linear infinite;
+  animation-delay: var(--anim-delay, 0s);
+  will-change: transform;
+}
+
+.anim-drift-diag-up {
+  animation: bgDriftDiagBottomToTop var(--anim-duration, 42s) linear infinite;
+  animation-delay: var(--anim-delay, 0s);
+  will-change: transform;
+}
+
+.anim-drift-diag-down {
+  animation: bgDriftDiagTopToBottom var(--anim-duration, 45s) linear infinite;
+  animation-delay: var(--anim-delay, 0s);
+  will-change: transform;
+}
+
+.anim-drift-rot {
+  animation: bgRotatingDrift var(--anim-duration, 50s) linear infinite;
+  animation-delay: var(--anim-delay, 0s);
+  will-change: transform;
+}
+
+.anim-pulse-red {
+  animation: redPulseSlow 6.5s ease-in-out infinite;
+}
+
+.anim-progress-gleam {
+  animation: progressGleam 2.8s ease-in-out infinite;
+}
+
+.anim-light-streak {
+  animation: streakDrift 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Mobile optimizations: reduce animation speed and opacity to conserve mobile battery */
+@media (max-width: 768px) {
+  .mobile-bg-logo {
+    opacity: calc(var(--mobile-opacity, 0.08)) !important;
+  }
+}
+
+/* Respect Accessibility Preferences */
+@media (prefers-reduced-motion: reduce) {
+  .anim-drift-ltr,
+  .anim-drift-rtl,
+  .anim-drift-diag-up,
+  .anim-drift-diag-down,
+  .anim-drift-rot,
+  .anim-hero-float,
+  .anim-hero-glow,
+  .anim-pulse-red,
+  .anim-progress-gleam,
+  .anim-light-streak {
+    animation: none !important;
+    transform: none !important;
+  }
+}
