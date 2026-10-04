@@ -60,7 +60,11 @@ export const MainLogoSection: React.FC = () => {
             viewBox="0 0 400 500"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-[280px] sm:w-[340px] lg:w-[420px] h-auto overflow-visible filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.95)]"
+            className="w-[280px] sm:w-[340px] lg:w-[420px] h-auto overflow-visible transition-all duration-700"
+            style={{
+              filter:
+                'drop-shadow(0 0 18px rgba(163, 0, 40, 0.65)) drop-shadow(0 0 38px rgba(109, 0, 26, 0.8)) drop-shadow(0 0 75px rgba(109, 0, 26, 0.5)) drop-shadow(0 25px 50px rgba(0, 0, 0, 0.95))',
+            }}
           >
             <defs>
               <linearGradient id="monolithFace" x1="120" y1="40" x2="280" y2="460" gradientUnits="userSpaceOnUse">
@@ -70,10 +74,10 @@ export const MainLogoSection: React.FC = () => {
               </linearGradient>
 
               <linearGradient id="monolithBevel" x1="80" y1="40" x2="280" y2="460" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.65" />
-                <stop offset="25%" stopColor="#6D001A" stopOpacity="0.85" />
-                <stop offset="65%" stopColor="#30000B" stopOpacity="0.6" />
-                <stop offset="100%" stopColor="#6D001A" stopOpacity="0.3" />
+                <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.85" />
+                <stop offset="25%" stopColor="#A30028" stopOpacity="0.95" />
+                <stop offset="65%" stopColor="#6D001A" stopOpacity="0.85" />
+                <stop offset="100%" stopColor="#A30028" stopOpacity="0.6" />
               </linearGradient>
 
               <linearGradient id="subtleGleam" x1="0" y1="0" x2="1" y2="1">
