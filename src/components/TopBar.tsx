@@ -34,8 +34,15 @@ export const TopBar: React.FC = () => {
         aria-label="1PLACE.LK Home"
       >
         <span className="w-1.5 h-1.5 rounded-full bg-[#6D001A] shadow-[0_0_8px_#6D001A] group-hover:scale-125 transition-transform" />
-        <span className="text-xs sm:text-sm font-extrabold tracking-[0.26em] text-white uppercase font-display group-hover:text-zinc-200 transition-colors">
-          1PLACE<span className="text-[#6D001A]">.LK</span>
+        <span
+          className="text-xs sm:text-sm font-extrabold tracking-[0.36em] text-white uppercase transition-all duration-300 group-hover:text-white"
+          style={{
+            fontFamily: "'Cinzel', 'Space Grotesk', serif",
+            letterSpacing: '0.36em',
+            textShadow: '0 0 16px rgba(255, 255, 255, 0.22)',
+          }}
+        >
+          1PLACE<span className="text-[#6D001A] font-bold text-glow-burgundy">.LK</span>
         </span>
       </a>
 

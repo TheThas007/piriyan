@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { RunningGiftBoy } from './RunningGiftBoy';
 
 export const MainLogoSection: React.FC = () => {
   const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
@@ -106,6 +107,9 @@ export const MainLogoSection: React.FC = () => {
             <line x1="140" y1="150" x2="220" y2="85" stroke="url(#subtleGleam)" strokeWidth="2.5" strokeLinecap="round" />
             <line x1="220" y1="85" x2="245" y2="440" stroke="#FFFFFF" strokeOpacity="0.2" strokeWidth="1" />
           </svg>
+
+          {/* 3D Animated Boy Running from Below the Number 1 with Many Gifts */}
+          <RunningGiftBoy />
 
           {/* Luxury Pedestal Reflection */}
           <div

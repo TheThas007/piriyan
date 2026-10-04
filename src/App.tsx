@@ -4,6 +4,7 @@ import { BackgroundLogos } from './components/BackgroundLogos';
 import { TopBar } from './components/TopBar';
 import { MainLogoSection } from './components/MainLogoSection';
 import { ComingSoonContent } from './components/ComingSoonContent';
+import { GiftBirdsAnimation } from './components/GiftBirdsAnimation';
 import { WhatsAppIcon, InstagramIcon } from './components/SocialIcons';
 
 export default function App() {
@@ -29,9 +30,12 @@ export default function App() {
       <TopBar />
 
       {/* 4. Main Hero Viewport: Balanced 45% Left (Brand Campaign Visual) / 55% Right (Coming Soon & Countdown) */}
-      <main className="flex-1 flex items-center justify-center w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-4 sm:py-8 z-10">
+      <main className="flex-1 flex items-center justify-center w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-4 sm:py-8 z-10 relative overflow-hidden">
+        {/* 3D Flying Gift Birds Animation */}
+        <GiftBirdsAnimation />
+
         <div
-          className={`w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 xl:gap-16 transition-all duration-1000 ease-out ${
+          className={`w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 xl:gap-16 transition-all duration-1000 ease-out z-10 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
