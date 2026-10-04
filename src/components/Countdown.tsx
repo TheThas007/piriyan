@@ -58,73 +58,47 @@ export const Countdown: React.FC = () => {
 
   if (timeLeft.isLive) {
     return (
-      <div
-        className="flex flex-col items-start gap-4 my-6 relative z-30"
-        style={{ filter: 'none', backdropFilter: 'none' }}
-      >
-        <div className="flex items-center gap-3 px-6 py-3 rounded-xl bg-black/95 border-2 border-[#E50914] shadow-[0_0_35px_rgba(229,9,20,0.65)]">
-          <span className="w-3.5 h-3.5 rounded-full bg-[#E50914] animate-ping" />
-          <span className="text-2xl sm:text-3xl font-black tracking-widest text-white uppercase font-display">
-            WE&apos;RE LIVE
+      <div className="flex flex-col items-start gap-4 my-6 relative z-30">
+        <div className="flex items-center gap-3 px-6 py-3 rounded-2xl bg-black/80 border border-[#6D001A] shadow-[0_0_35px_rgba(109,0,26,0.5)] backdrop-blur-md">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#6D001A] animate-ping" />
+          <span className="text-xl sm:text-2xl font-bold tracking-[0.25em] text-white uppercase font-display">
+            WE ARE LIVE
           </span>
         </div>
-        <a
-          href="https://1place.lk"
-          className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#E50914] hover:bg-[#FF1A1A] text-white font-bold text-lg rounded-xl shadow-[0_0_30px_rgba(229,9,20,0.7)] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-[#FF1A1A] focus:ring-offset-2 focus:ring-offset-[#050505]"
-        >
-          <span>ENTER 1PLACE</span>
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
-        </a>
       </div>
     );
   }
 
   const timeUnits = [
-    { label: 'DAYS', value: mounted ? formatNum(timeLeft.days) : '--' },
-    { label: 'HOURS', value: mounted ? formatNum(timeLeft.hours) : '--' },
-    { label: 'MINUTES', value: mounted ? formatNum(timeLeft.minutes) : '--' },
-    { label: 'SECONDS', value: mounted ? formatNum(timeLeft.seconds) : '--' },
+    { label: 'DAYS', value: mounted ? formatNum(timeLeft.days) : '27' },
+    { label: 'HOURS', value: mounted ? formatNum(timeLeft.hours) : '00' },
+    { label: 'MINUTES', value: mounted ? formatNum(timeLeft.minutes) : '34' },
+    { label: 'SECONDS', value: mounted ? formatNum(timeLeft.seconds) : '52' },
   ];
 
   return (
     <div
-      className="w-full my-6 sm:my-8 relative z-30"
+      className="w-full my-6 sm:my-8 relative z-20"
       role="timer"
       aria-live="polite"
-      aria-label={`Launch countdown: ${timeLeft.days} days, ${timeLeft.hours} hours, ${timeLeft.minutes} minutes, ${timeLeft.seconds} seconds remaining until launch`}
-      style={{
-        filter: 'none',
-        backdropFilter: 'none',
-      }}
+      aria-label={`Launch countdown: ${timeLeft.days} days, ${timeLeft.hours} hours, ${timeLeft.minutes} minutes, ${timeLeft.seconds} seconds remaining`}
     >
       <div className="grid grid-cols-4 gap-2.5 sm:gap-4 max-w-[540px]">
         {timeUnits.map((unit) => (
           <div
             key={unit.label}
-            className="group relative flex flex-col items-center justify-center py-4 px-2 sm:py-5 sm:px-4 rounded-xl sm:rounded-2xl bg-[#09090b]/90 border border-[#E50914]/40 hover:border-[#E50914]/80 transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.95)] hover:shadow-[0_0_30px_rgba(229,9,20,0.35)]"
-            style={{
-              filter: 'none',
-              backdropFilter: 'none',
-            }}
+            className="group relative flex flex-col items-center justify-center py-4 px-2 sm:py-5 sm:px-3 rounded-2xl bg-[#08080a]/60 backdrop-blur-md border border-[#6D001A]/35 hover:border-[#6D001A]/75 transition-all duration-300 shadow-[0_12px_32px_rgba(0,0,0,0.85)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.95),0_0_20px_rgba(109,0,26,0.25)]"
           >
-            {/* Top red edge ambient glint */}
-            <div className="absolute top-0 inset-x-3 h-[1.5px] bg-gradient-to-r from-transparent via-[#FF1A1A]/80 to-transparent group-hover:via-[#FF1A1A] transition-colors" />
+            {/* Ultra-subtle Top Bevel Specular Line */}
+            <div className="absolute top-0 inset-x-3 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-[#6D001A]/60 transition-colors" />
 
-            {/* Countdown Digits: Razor-sharp, bright white, high contrast */}
-            <span
-              className="font-mono-numbers text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black text-white tracking-tight drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]"
-              style={{ filter: 'none' }}
-            >
+            {/* Countdown Digits: Crisp, Elegant, High-Contrast White */}
+            <span className="font-mono-numbers text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
               {unit.value}
             </span>
 
-            {/* Card Label: Razor-sharp uppercase */}
-            <span
-              className="mt-1.5 sm:mt-2 text-[9px] sm:text-[11px] font-bold tracking-[0.25em] text-[#D4D4D8] uppercase select-none group-hover:text-white transition-colors"
-              style={{ filter: 'none' }}
-            >
+            {/* Sub-label: Small Uppercase with Letter Spacing */}
+            <span className="mt-1.5 sm:mt-2 text-[9px] sm:text-[10px] font-semibold tracking-[0.25em] text-zinc-400 uppercase select-none group-hover:text-zinc-200 transition-colors">
               {unit.label}
             </span>
           </div>

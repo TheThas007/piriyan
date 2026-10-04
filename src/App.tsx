@@ -17,44 +17,40 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-[100dvh] w-full bg-[#050505] text-white flex flex-col justify-between overflow-x-hidden selection:bg-[#E50914] selection:text-white">
-      {/* 1. Cinematic Background Layer with Boosted Red Atmospheric Lighting */}
+    <div className="relative min-h-[100dvh] w-full bg-[#000000] text-white flex flex-col justify-between overflow-x-hidden selection:bg-[#6D001A] selection:text-white antialiased">
+      {/* 1. Cinematic Background Layer: Deep Black with Subtle Burgundy Ambient Lighting */}
       <CinematicBackground />
 
-      {/* 2. Continuously Moving Background Logos Layer (13 Animated Instances) */}
+      {/* 2. Luxury Depth-of-Field Moving Brand Watermarks */}
       <BackgroundLogos />
 
-      {/* 3. Minimal Clean Top Header */}
+      {/* 3. Minimal Luxury Top Header (1PLACE.LK | LAUNCH, CATEGORIES, ABOUT) */}
       <TopBar />
 
-      {/* 4. Main Viewport Hero: 45% Left (Large Hero Logo) / 55% Right (Clean Coming Soon Content) */}
-      <main className="flex-1 flex items-center justify-center w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-4 sm:py-8 z-10">
+      {/* 4. Main Hero Viewport: Balanced 45% Left (Brand Campaign Visual) / 55% Right (Coming Soon & Countdown) */}
+      <main className="flex-1 flex items-center justify-center w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-4 sm:py-8 z-10">
         <div
-          className={`w-full flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-12 xl:gap-16 transition-all duration-1000 ease-out ${
+          className={`w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 xl:gap-16 transition-all duration-1000 ease-out ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
-          {/* Left Column (Desktop ~45%) / Top Center (Mobile): Hero 1PLACE Logo */}
-          <div className="w-full lg:w-[46%] xl:w-[45%] flex items-center justify-center lg:justify-center order-1">
+          {/* Left Column (~45%): Luxury Fashion-Tech Brand Campaign Visual */}
+          <div className="w-full lg:w-[46%] xl:w-[45%] flex items-center justify-center lg:justify-start order-1">
             <MainLogoSection />
           </div>
 
-          {/* Right Column (Desktop ~55%) / Bottom Center (Mobile): Coming Soon Launch Content */}
+          {/* Right Column (~55%): Clean Coming Soon Content & Glassmorphic Countdown */}
           <div className="w-full lg:w-[54%] xl:w-[55%] flex items-center justify-center lg:justify-start order-2">
             <ComingSoonContent />
           </div>
         </div>
       </main>
 
-      {/* 5. Minimal Ambient Footer */}
-      <footer
-        className="w-full max-w-[1600px] mx-auto px-6 py-4 flex items-center justify-center text-center z-10 text-[10px] sm:text-xs text-[#A1A1AA]/50 tracking-[0.22em] uppercase select-none font-mono-numbers transition-all duration-700"
-        style={{
-          filter: 'blur(2px)',
-          opacity: 0.5,
-        }}
-      >
-        © 2026 1PLACE.LK • ALL RIGHTS RESERVED
+      {/* 5. Minimal Agency-Quality Footer */}
+      <footer className="w-full max-w-[1600px] mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left z-20 text-[10px] sm:text-[11px] text-zinc-500 tracking-[0.24em] uppercase select-none font-sans font-medium">
+        <span>© 2026 1PLACE.LK</span>
+        <span className="hidden sm:inline text-zinc-700">•</span>
+        <span>EVERYTHING YOU NEED. ONE PLACE.</span>
       </footer>
     </div>
   );
