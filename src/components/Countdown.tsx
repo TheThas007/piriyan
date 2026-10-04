@@ -58,9 +58,9 @@ export const Countdown: React.FC = () => {
 
   if (timeLeft.isLive) {
     return (
-      <div className="flex flex-col items-start gap-4 my-6 relative z-30">
-        <div className="flex items-center gap-3 px-6 py-3 rounded-2xl bg-black/80 border border-[#6D001A] shadow-[0_0_35px_rgba(109,0,26,0.5)] backdrop-blur-md">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#6D001A] animate-ping" />
+      <div className="flex items-center justify-center my-6">
+        <div className="flex items-center gap-3 px-8 py-3.5 rounded-2xl bg-black/80 border border-[#6D001A] shadow-[0_0_35px_rgba(109,0,26,0.6)] backdrop-blur-md">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#FF1A1A] animate-ping" />
           <span className="text-xl sm:text-2xl font-bold tracking-[0.25em] text-white uppercase font-display">
             WE ARE LIVE
           </span>
@@ -70,38 +70,43 @@ export const Countdown: React.FC = () => {
   }
 
   const timeUnits = [
-    { label: 'DAYS', value: mounted ? formatNum(timeLeft.days) : '27' },
-    { label: 'HOURS', value: mounted ? formatNum(timeLeft.hours) : '00' },
-    { label: 'MINUTES', value: mounted ? formatNum(timeLeft.minutes) : '34' },
-    { label: 'SECONDS', value: mounted ? formatNum(timeLeft.seconds) : '52' },
+    { label: 'DAYS', value: mounted ? formatNum(timeLeft.days) : '105' },
+    { label: 'HOURS', value: mounted ? formatNum(timeLeft.hours) : '02' },
+    { label: 'MINUTES', value: mounted ? formatNum(timeLeft.minutes) : '23' },
+    { label: 'SECONDS', value: mounted ? formatNum(timeLeft.seconds) : '50' },
   ];
 
   return (
     <div
-      className="w-full my-6 sm:my-8 relative z-20"
+      className="w-full my-4 sm:my-6 md:my-8 relative select-none"
       role="timer"
       aria-live="polite"
       aria-label={`Launch countdown: ${timeLeft.days} days, ${timeLeft.hours} hours, ${timeLeft.minutes} minutes, ${timeLeft.seconds} seconds remaining`}
     >
-      <div className="grid grid-cols-4 gap-2.5 sm:gap-4 max-w-[540px]">
-        {timeUnits.map((unit) => (
-          <div
-            key={unit.label}
-            className="group relative flex flex-col items-center justify-center py-4 px-2 sm:py-5 sm:px-3 rounded-2xl bg-[#08080a]/60 backdrop-blur-md border border-[#6D001A]/35 hover:border-[#6D001A]/75 transition-all duration-300 shadow-[0_12px_32px_rgba(0,0,0,0.85)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.95),0_0_20px_rgba(109,0,26,0.25)]"
-          >
-            {/* Ultra-subtle Top Bevel Specular Line */}
-            <div className="absolute top-0 inset-x-3 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-[#6D001A]/60 transition-colors" />
+      <div className="flex items-center justify-center gap-3 sm:gap-6 md:gap-10 lg:gap-14 max-w-4xl mx-auto">
+        {timeUnits.map((unit, index) => (
+          <React.Fragment key={unit.label}>
+            {/* Countdown Column */}
+            <div className="flex flex-col items-center justify-center min-w-[65px] sm:min-w-[95px] md:min-w-[130px] lg:min-w-[150px]">
+              {/* Large, Bold, Elegant Numbers with Subtle Burgundy Glow */}
+              <span className="font-mono-numbers text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+                {unit.value}
+              </span>
 
-            {/* Countdown Digits: Crisp, Elegant, High-Contrast White */}
-            <span className="font-mono-numbers text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-              {unit.value}
-            </span>
+              {/* Sub-label: DAYS, HOURS, MINUTES, SECONDS */}
+              <span className="mt-1 sm:mt-2 text-[10px] sm:text-xs md:text-sm font-bold tracking-[0.28em] text-zinc-300 uppercase">
+                {unit.label}
+              </span>
+            </div>
 
-            {/* Sub-label: Small Uppercase with Letter Spacing */}
-            <span className="mt-1.5 sm:mt-2 text-[9px] sm:text-[10px] font-semibold tracking-[0.25em] text-zinc-400 uppercase select-none group-hover:text-zinc-200 transition-colors">
-              {unit.label}
-            </span>
-          </div>
+            {/* Thin Vertical Burgundy Divider Line Between Columns */}
+            {index < timeUnits.length - 1 && (
+              <div
+                className="h-14 sm:h-20 md:h-24 w-[1px] bg-gradient-to-b from-transparent via-[#FF1A1A]/40 to-transparent flex-shrink-0"
+                aria-hidden="true"
+              />
+            )}
+          </React.Fragment>
         ))}
       </div>
     </div>
