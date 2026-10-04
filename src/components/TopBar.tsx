@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { WhatsAppIcon, InstagramIcon } from './SocialIcons';
 
 export const TopBar: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string | null>(null);
+
+  const WHATSAPP_COMMUNITY_URL = 'https://chat.whatsapp.com/Jd1M5N2xeFfJh9tyLiEr2j';
+  const INSTAGRAM_URL = 'https://www.instagram.com/1place.lk1/';
 
   const navItems = [
     {
@@ -35,9 +39,9 @@ export const TopBar: React.FC = () => {
         </span>
       </a>
 
-      {/* Right Minimal Luxury Navigation */}
-      <nav aria-label="Main Navigation">
-        <ul className="flex items-center gap-6 sm:gap-10">
+      {/* Right Minimal Luxury Navigation & Social Links */}
+      <nav aria-label="Main Navigation" className="flex items-center gap-6 sm:gap-8">
+        <ul className="flex items-center gap-5 sm:gap-8">
           {navItems.map((item) => (
             <li key={item.id} className="relative">
               <button
@@ -80,6 +84,30 @@ export const TopBar: React.FC = () => {
             </li>
           ))}
         </ul>
+
+        {/* Top Header Social Quick Links */}
+        <div className="hidden sm:flex items-center gap-3 pl-4 border-l border-white/10 text-zinc-400">
+          <a
+            href={WHATSAPP_COMMUNITY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1 hover:text-[#25D366] transition-colors"
+            title="Join WhatsApp Community"
+            aria-label="WhatsApp Community"
+          >
+            <WhatsAppIcon className="w-4 h-4" />
+          </a>
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1 hover:text-[#E1306C] transition-colors"
+            title="Follow on Instagram"
+            aria-label="Instagram Profile"
+          >
+            <InstagramIcon className="w-4 h-4" />
+          </a>
+        </div>
       </nav>
     </header>
   );
