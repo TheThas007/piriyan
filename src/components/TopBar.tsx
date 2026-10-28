@@ -11,7 +11,7 @@ export const TopBar: React.FC = () => {
     {
       id: 'LAUNCH',
       label: 'LAUNCH',
-      info: 'Official public opening on November 01, 2026 • 12:00 AM Sri Lanka Time.',
+      info: 'Official public opening on November 11, 2026 • 12:00 AM Sri Lanka Time.',
     },
     {
       id: 'CATEGORIES',

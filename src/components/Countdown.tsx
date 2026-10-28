@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-// Official Launch Target: November 1, 2026 at 12:00:00 AM Sri Lanka Time (Asia/Colombo / UTC+5:30)
-const LAUNCH_TARGET_ISO = '2026-11-01T00:00:00+05:30';
+// Official Launch Target: November 11, 2026 at 12:00:00 AM Sri Lanka Time (Asia/Colombo / UTC+5:30)
+const LAUNCH_TARGET_ISO = '2026-11-11T00:00:00+05:30';
 
 interface TimeLeft {
   days: number;

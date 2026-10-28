@@ -60,7 +60,7 @@ export const ComingSoonContent: React.FC = () => {
 
         {/* Date and Time: Prominent, larger, with tiny burgundy dot */}
         <div className="flex items-center gap-2 sm:gap-2.5 text-sm sm:text-base md:text-lg font-bold tracking-[0.2em] text-white uppercase font-display">
-          <span>NOVEMBER 01, 2026</span>
+          <span>NOVEMBER 11, 2026</span>
           <span className="text-[#6D001A] text-lg leading-none" aria-hidden="true">
             •
           </span>
@@ -148,7 +148,7 @@ export const ComingSoonContent: React.FC = () => {
             </h3>
 
             <p className="text-xs sm:text-sm text-zinc-300 font-light mb-5 leading-relaxed">
-              1PLACE.LK opens November 01, 2026. Enter your email for exclusive private access and opening privilege codes.
+              1PLACE.LK opens November 11, 2026. Enter your email for exclusive private access and opening privilege codes.
             </p>
 
             {subscribed ? (
